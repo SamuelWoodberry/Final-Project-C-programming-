@@ -8,7 +8,7 @@
 #include <stdlib.h>
 
 void init_player(Player *p, PlayerId id) {
-    // Start fresh!
+    // Start fresh
     p->count = 0;
     p->books = 0;
     p->id = id;
@@ -62,7 +62,7 @@ int give_cards_of_rank(Player *p, Rank r, Card *out_cards) {
 int check_and_remove_books(Player *p) {
     int books_found = 0;
     // Array to count how many of each rank the player has.
-    // e.g., rank_counts[2] will be the number of 2s in the hand.
+    // For example, rank_counts[2] will be the number of 2s in the hand.
     int rank_counts[NUM_RANKS] = {0};
     
     // First, tally up the occurrences of each rank
