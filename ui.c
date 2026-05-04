@@ -85,6 +85,6 @@ void print_game_status(const Player *user, const Player *pc, int deck_cards_left
 void print_message_delayed(const char *msg) {
     printf("%s", msg);
     fflush(stdout); // Force the text to print immediately
-    usleep(400000); // Wait for 0.4 seconds. This adds a dramatic effect to drawing cards!
+    usleep(400000); // Wait for 0.4 seconds. This adds a dramatic effect to drawing cards
     printf("\n");
 }
