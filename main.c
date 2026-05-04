@@ -1,10 +1,9 @@
 /*
  * ECE 101 Final Project: Modified Go Fish
- * By: [Your Name]
+ * By: Samuel Woodberry
  * 
  * This is the main entry point for the game. I kept it super simple 
- * and moved all the heavy lifting into game.c to keep the code modular,
- * just like the professor suggested in the assignment!
+ * and moved all the heavy lifting into game.c to keep the code modular
  */
 #include "game.h"
 
