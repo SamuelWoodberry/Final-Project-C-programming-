@@ -1,5 +1,5 @@
 /*
- * ECE 101 Final Project: Modified Go Fish
+ * ECE 101 Final Project: Go Fish
  * By: Samuel Woodberry
  * 
  * This is the main entry point for the game. I kept it super simple 
