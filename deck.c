@@ -7,7 +7,7 @@
 #include <stdlib.h>
 
 // I'm using static global variables here so they are only accessible 
-// within this file (encapsulation!). 
+// within this file. 
 static Card g_deck[MAX_CARDS];
 static int g_deck_size = 0;
 
