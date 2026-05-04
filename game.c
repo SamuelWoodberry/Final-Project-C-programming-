@@ -67,7 +67,7 @@ static Rank get_user_ask_rank(void) {
 // Logic for the computer to pick a card
 static Rank get_pc_ask_rank(void) {
     // I decided to make the computer pick a random card from its hand. 
-    // It's not a super genius AI, but it works well and is fair!
+    
     if (pc.count == 0) return RANK_A; 
     
     // Pick a random index
@@ -148,13 +148,13 @@ static bool play_turn(Player *current, Player *opponent, const char *current_nam
         sprintf(msg, "%s received %d card(s).", current_name, given);
         print_message_delayed(msg);
         
-        // Check if getting these cards completed a book!
+        // Check if getting these cards completed a book
         check_books_and_notify(current, current_name);
         
-        return true; // They got what they asked for, so they go again!
+        return true; // They got what they asked for, so they go again
         
     } else {
-        // Step 3: GO FISH!
+        // Step 3: GO FISH
         char msg[100];
         sprintf(msg, "%s says: 'Go Fish!'", opponent_name);
         print_message_delayed(msg);
@@ -177,7 +177,7 @@ static bool play_turn(Player *current, Player *opponent, const char *current_nam
             add_card(current, c);
             check_books_and_notify(current, current_name);
             
-            // If you drew the card you asked for, you get to go again!
+            // If you drew the card you asked for, you get to go again
             if (c.rank == asked_rank) {
                 sprintf(msg, "%s drew the asked rank! Turn continues.", current_name);
                 print_message_delayed(msg);
@@ -212,7 +212,7 @@ void run_game(void) {
         if (draw_card(&c)) add_card(&pc, c);
     }
     
-    // Just in case someone was incredibly lucky and got a book in their starting hand!
+    // Just in case someone was incredibly lucky and got a book in their starting hand
     check_and_remove_books(&user);
     check_and_remove_books(&pc);
     
